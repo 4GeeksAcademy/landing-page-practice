@@ -2,11 +2,33 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-// include your styles into the webpack bundle
-import "../styles/index.css";
-
 //import your own components
-import Home from "./component/home.jsx";
+import Navbar from "./component/navbar.jsx";
+import Jumbotron from "./component/jumbotron.jsx";
+import Cards from "./component/cards.jsx";
+import Footer from "./component/footer.jsx";
 
 //render your react application
-ReactDOM.render(<Home />, document.querySelector("#app"));
+ReactDOM.render(<Navbar />, document.querySelector("#navbar"));
+ReactDOM.render(<Jumbotron />, document.querySelector("#jumbotron"));
+ReactDOM.render(<Cards
+    title="Titulo 1"
+    text="Este es un modelo de texto para el card 1, mediante el uso de props para la práctica de React."
+    label="Primer botón"
+/>, document.querySelector("#cards1"));
+ReactDOM.render(<Cards
+    title="Titulo 2"
+    text="Este es un modelo de texto para el card 2, mediante el uso de props para la práctica de React."
+    label="Segundo botón"
+/>, document.querySelector("#cards2"));
+ReactDOM.render(<Cards
+    title="Titulo 3"
+    text="Este es un modelo de texto para el card 3, mediante el uso de props para la práctica de React."
+    label="Tercer botón"
+/>, document.querySelector("#cards3"));
+ReactDOM.render(<Cards
+    title="Titulo 4"
+    text="Este es un modelo de texto para el card 4, mediante el uso de props para la práctica de React."
+    label="Cuarto botón"
+/>, document.querySelector("#cards4"));
+ReactDOM.render(<Footer name="Yohan Mayorga" />, document.querySelector("#footer"));
